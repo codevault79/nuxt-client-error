@@ -1,0 +1,55 @@
+{
+  "name": "@shuami-dev/nuxt-client-error",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c && tsc --emitDeclarationOnly",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "nuxt",
+    "vue",
+    "error-handling",
+    "i18n"
+  ],
+  "author": "Ahmad Shuami <shuami.dev@gmail.com>",
+  "license": "MIT",
+  "description": "A utility for handling and displaying client error statuses in Nuxt 3 applications",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codevault79/nuxt-client-error.git"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^22.14.1",
+    "rollup": "^2.79.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.8.3",
+    "vue": "^3.5.13"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.ts"
+      ]
+    }
+  }
+}
