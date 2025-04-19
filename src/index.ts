@@ -1,3 +1,7 @@
-import { errorStatus, type CustomError } from "./errorStatus"
+import {
+	errorStatus,
+	type CustomError,
+	type ErrorStatusOptions,
+} from "./errorStatus"
 
-export { errorStatus, type CustomError }
+export { errorStatus, type CustomError, type ErrorStatusOptions }

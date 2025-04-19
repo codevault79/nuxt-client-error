@@ -12,7 +12,7 @@ npm install @shuami-dev/nuxt-client-error
 
 ```typescript
 import { useI18n } from "vue-i18n"
-import { errorStatus, type CustomError } from "@shuami-dev/nuxt-client-error"
+import { errorStatus } from "@shuami-dev/nuxt-client-error"
 
 export default {
 	setup() {
@@ -45,6 +45,28 @@ export default {
 		}
 
 		const status = errorStatus(error, t, customError)
+
+		return { status }
+	},
+}
+```
+
+### With Debug Options
+
+```typescript
+import { useI18n } from "vue-i18n"
+import { errorStatus } from "@shuami-dev/nuxt-client-error"
+
+export default {
+	setup() {
+		const error = ref(new Error("500 Server Error"))
+		const { t } = useI18n()
+
+		// Enable debug logging on server side only
+		const status = errorStatus(error, t, null, {
+			debug: true, // Enable debug logging
+			serverOnly: true, // Only log on server
+		})
 
 		return { status }
 	},
