@@ -75,7 +75,7 @@ export default {
 
 ## Required i18n Translations
 
-Your i18n configuration should include the following keys:
+Make sure your i18n configuration should include the following keys:
 
 ```json
 {
