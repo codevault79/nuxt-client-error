@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@types/node": "^22.15.3",
-    "rollup": "^4.40.1",
+    "@types/node": "^22.15.14",
+    "rollup": "^4.40.2",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.8.3",
     "vue": "^3.5.13"
